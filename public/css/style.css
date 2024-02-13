@@ -1,0 +1,59 @@
+/* public/css/style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* inclui padding e borda no cálculo do tamanho */
+}
+
+body {
+    background-color: red;
+    font-family: Arial, sans-serif; /* escolha uma fonte apropriada */
+}
+
+.container {
+    background-color: yellow;
+    max-width: 1200px; /* defina uma largura máxima para o conteúdo */
+    margin: 0 auto; /* centralize o conteúdo horizontalmente */
+    padding: 20px;
+}
+
+header {
+    background-color: rgb(3, 228, 71);
+    padding: 10px; /* adicione algum espaço interno ao cabeçalho */
+    margin-bottom: 20px; /* adicione espaço entre o cabeçalho e o conteúdo principal */
+}
+
+.content-wrapper {
+    display: flex;
+}
+
+main {
+    flex-grow: 2;
+    background-color: #f0f0f0;
+    padding: 5px;
+}
+
+aside {
+    flex-grow: 1;
+    background-color: #ccc;
+    padding: 20px; /* adicione espaço interno ao aside */
+}
+
+footer {
+    background-color: brown;
+    padding: 10px; /* adicione espaço interno ao rodapé */
+    margin-top: 20px; /* adicione espaço entre o rodapé e o conteúdo principal */
+}
+
+/* Estilos específicos para telas menores */
+@media only screen and (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    main, aside {
+        width: 100%; /* certifique-se de que ambos ocupem 100% da largura da tela em telas menores */
+        margin-bottom: 20px; /* adicione espaço entre main e aside */
+    }
+}

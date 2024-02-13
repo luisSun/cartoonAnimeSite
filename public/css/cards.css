@@ -1,0 +1,75 @@
+/* CSS para o estilo do card de filmes */
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 100px; /* Reduzindo o tamanho do card */
+    margin: 3px; /* Reduzindo o espaço entre os cards */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #f9f9f9; /* Cor de fundo do card */
+}
+
+.card-content {
+    position: relative;
+}
+
+.card-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.orange-field {
+    border: #fff;
+    position: absolute;
+    bottom: 15px; /* Subindo o título orange mais próximo da imagem */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo do campo laranja com transparência */
+    color: #fff; /* Cor do texto no campo laranja */
+    padding: 5px 10px;
+}
+.card-title {
+    margin: 5px; /* Reduzindo a margem interna */
+}
+
+.card-info {
+    background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo da barra de informações */
+    color: #fff; /* Cor do texto na barra de informações */
+    padding: 10px;
+}
+
+.card-info h2 {
+    margin: 0;
+    font-size: 16px; /* Reduzindo o tamanho do título */
+    font-weight: bold;
+}
+
+.card-info p {
+    margin: 3px 0; /* Reduzindo o espaço entre os elementos */
+}
+
+/* CSS para dispositivos maiores que 768px (desktop) */
+@media only screen and (min-width: 769px) {
+    .card {
+        width: calc(25% - 10px); /* Reduzindo o tamanho do card para mostrar 4 cartões por linha */
+    }
+}
+
+/* CSS para dispositivos menores ou iguais a 768px (mobile) */
+@media only screen and (max-width: 768px) {
+    .card {
+        width: calc(50% - 10px); /* Reduzindo o tamanho do card para mostrar 2 cartões por linha */
+    }
+
+    .card-title {
+        display: none; /* Oculta o título em dispositivos móveis */
+    }
+}
