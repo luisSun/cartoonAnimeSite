@@ -18,13 +18,15 @@
         
         <div class="content-wrapper">
             <main>
-
-                <div class="article-head">
-                    <h4>Head do artigo <%= resulFilms ? resulFilms.title : 'ID NAO ENCONTRADO!' %></h4>
-                </div>
-                <div id="filmes" class="artig-body">
-                    <div class="campo-vid">
-                        <% if (resulFilms) { %>
+                Main
+                <div class="article-main">
+                    <div class="article-head">
+                        <h2>Filmes </h2>
+                    </div>
+                    <div class="article-body">
+                        <div class="card-container" id="body-artigo">
+                            <div class="campo-vid">
+                                <% if (resulFilms) { %>
                             <div class="video-container">
                                 <video class="midia-vid" width="640" height="360" controls poster="<%= resulFilms.cover %>" muted>
                                     <source src="#" type="video/mp4">
