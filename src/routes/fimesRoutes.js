@@ -3,7 +3,6 @@ const router = express.Router();
 const { executeQuery } = require('../db/db');
 
 
-
 router.get('/filmes', async (req, res) => {
     const [result] = await Promise.all([
         executeQuery('SELECT * FROM filmes_teste ORDER BY id',),
