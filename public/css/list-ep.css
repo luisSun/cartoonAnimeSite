@@ -32,6 +32,7 @@
     background-color: blue;
 }
 
-.list-ep-ul li{
+.list-ep li{
     list-style-type: none; text-align: left;
+    background-color: yellowgreen;
 }
