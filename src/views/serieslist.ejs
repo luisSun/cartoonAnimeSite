@@ -33,7 +33,7 @@
                                             <h3>Season <%= currentSeason %></h3> <!-- Título da temporada -->
                                             <ul> <!-- Inicia a lista de episódios da temporada -->
                                             <% while (i < resulFilms.length && resulFilms[i].Season === currentSeason) { %>
-                                                <li><%= resulFilms[i].title %></li> <!-- Título do episódio -->
+                                                <a href="#"><li><%= resulFilms[i].title %></li></a> <!-- Título do episódio -->
                                                 <% i++; %>
                                             <% } %>
                                             </ul> <!-- Fecha a lista de episódios da temporada -->
