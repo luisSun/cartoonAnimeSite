@@ -7,7 +7,8 @@
 }
 
 .card {
-    width: 50px; /* Reduzindo o tamanho do card */
+    width: 185px; /* Reduzindo o tamanho do card */
+    height: 290px;
     margin: 2px; /* Reduzindo o espaço entre os cards */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -16,13 +17,15 @@
 }
 
 .card-content {
+    width: 100%;
+    height: 100%;
     position: relative;
 }
 
 .card-content img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
+    object-fit: cover;
 }
 
 .orange-field {
@@ -79,6 +82,7 @@
     margin: 3px 0; /* Reduzindo o espaço entre os elementos */
 }
 
+
 /* CSS para dispositivos maiores que 768px (desktop) */
 @media only screen and (min-width: 769px) {
     .card {
@@ -96,3 +100,4 @@
         display: none; /* Oculta o título em dispositivos móveis */
     }
 }
+

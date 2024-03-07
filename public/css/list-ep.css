@@ -19,11 +19,16 @@
     max-width: 30%; /* Define a largura máxima como 30% do espaço disponível */
 }
 
+.poster-card img{
+    width: 100%;
+    height: 100%;
+}
+
 .descr-serie {
     flex: 2; /* Ocupa o dobro do espaço do poster-card */
     min-width: 70%; /* Define a largura mínima como 70% do espaço disponível */
     padding-left: 10px;
-    background-color: blueviolet;
+
 }
 
 .list-ep{
@@ -31,11 +36,25 @@
     background-color: blue;
 }
 
+
 .list-ep li{
     list-style-type: none; text-align: left;
     background-color: yellowgreen;
     border: 1px solid #000;
     display: block;
+}
+
+.list-episodes{
+    padding: 5px 5px 5px 5px;
+}
+
+.list-ep a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.desc-{
+    font-weight:bold;
 }
 
 @media only screen and (max-width: 768px) {    
