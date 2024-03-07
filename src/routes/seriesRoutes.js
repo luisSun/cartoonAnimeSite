@@ -33,7 +33,7 @@ router.get('/serie/:imdb_cod', async (req, res) => {
 
         // Busca os episódios relacionados na tabela series_ep
         const [resulFilms] = await Promise.all([
-            executeQuery('SELECT * FROM ep where type = ?', [serie.id]),
+            executeQuery('SELECT * FROM ep where type = ? ORDER BY id DESC', [serie.id]),
         ]);
 
         if (!resulFilms) {
@@ -42,8 +42,7 @@ router.get('/serie/:imdb_cod', async (req, res) => {
 
         const coverPath = serie.cover
         console.log(coverPath)
-        const valores = ['Filmes', 'filmes'];
-        const coverPth = ['01','02']
+        const valores = ['Cartoons', 'filmes'];
         //serie.cover; // Salvando o caminho da capa da série em uma constante
 
 

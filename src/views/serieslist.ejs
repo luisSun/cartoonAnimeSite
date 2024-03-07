@@ -30,10 +30,10 @@
                                         <% let i = 0; %>
                                         <% while (i < resulFilms.length) { %>
                                             <% let currentSeason = resulFilms[i].Season; %>
-                                            <h3>Season <%= currentSeason %></h3> <!-- Título da temporada -->
+                                            <h3>Season </h3> <!-- Título da temporada -->
                                             <ul> <!-- Inicia a lista de episódios da temporada -->
                                             <% while (i < resulFilms.length && resulFilms[i].Season === currentSeason) { %>
-                                                <a href="#"><li class="list-episodes"><%= resulFilms[i].title %></li></a> <!-- Título do episódio -->
+                                                <a href="#"><li class="list-episodes"> Season <%= resulFilms[i].season %> - Episode <%= resulFilms[i].ep_nr %> - <%= resulFilms[i].title %></li></a> <!-- Título do episódio -->
                                                 <% i++; %>
                                             <% } %>
                                             </ul> <!-- Fecha a lista de episódios da temporada -->
