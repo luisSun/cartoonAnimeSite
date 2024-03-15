@@ -4,7 +4,7 @@ const { executeQuery } = require('../db/db');
 
 router.get('/cartoon', async (req, res) => {
     const [result] = await Promise.all([
-        executeQuery('SELECT * FROM listaseries WHERE type = 1 ORDER BY id',),
+        executeQuery('SELECT * FROM listaseries WHERE type = 1 ORDER BY id DESC',),
     ]);
     const valor= ['Filmes', 'serie']
     res.status(200).render('filmesMain', { result: result, valor : valor });
@@ -12,7 +12,7 @@ router.get('/cartoon', async (req, res) => {
 
 router.get('/anime', async (req, res) => {
     const [result] = await Promise.all([
-        executeQuery('SELECT * FROM listaseries WHERE type = 2 ORDER BY id',),
+        executeQuery('SELECT * FROM listaseries WHERE type = 2 ORDER BY id DESC',),
     ]);
     const valor= ['Filmes', 'serie']
     res.status(200).render('filmesMain', { result: result, valor : valor });

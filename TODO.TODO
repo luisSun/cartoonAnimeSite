@@ -1,0 +1,12 @@
+TODO [] : Arrumar CSS
+TODO [] : Arrumar Add Filme
+TODO [] : Arrumar Add EPISODIO
+            precisa trazer o ultimo Add
+            evitar episodios duplicados
+            Add anime e Cartoon?
+
+git init
+git checkout -b 02-03-2024-1
+git add .
+git commit -m "Adicionando aside/tags"
+git push origin 02-03-2024-1

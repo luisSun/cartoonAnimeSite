@@ -1,0 +1,62 @@
+/* Estilo para o formulário */
+.form-add {
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Estilo para os rótulos */
+.form-add label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Estilo para os campos de entrada */
+.form-add input[type="text"],
+.form-add input[type="number"],
+.form-add select {
+    width: calc(100% - 10px);
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Estilo para os botões */
+.form-add button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Estilo para os botões ao passar o mouse */
+.form-add button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para o botão "Limpar" */
+.form-add button[type="button"] {
+    background-color: #dc3545;
+}
+
+/* Estilo para o botão "Limpar" ao passar o mouse */
+.form-add button[type="button"]:hover {
+    background-color: #bd2130;
+}
+
+/* Estilo para colocar os campos "Episódio" e "Temporada" na mesma linha */
+.form-add .ep-temp {
+    display: flex;
+}
+
+/* Estilo para colocar os campos "Mídia" e "Formato" na mesma linha */
+.form-add .mid-formato {
+    display: flex;
+}
