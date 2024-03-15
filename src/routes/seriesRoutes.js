@@ -4,7 +4,7 @@ const { executeQuery } = require('../db/db');
 
 router.get('/cartoon', async (req, res) => {
     const [result] = await Promise.all([
-        executeQuery('SELECT * FROM listaseries WHERE type = 1 ORDER BY id',),
+        executeQuery('SELECT * FROM listaseries WHERE type = 1 ORDER BY id DESC',),
     ]);
     const valor= ['Filmes', 'serie']
     res.status(200).render('filmesMain', { result: result, valor : valor });
@@ -12,7 +12,7 @@ router.get('/cartoon', async (req, res) => {
 
 router.get('/anime', async (req, res) => {
     const [result] = await Promise.all([
-        executeQuery('SELECT * FROM listaseries WHERE type = 2 ORDER BY id',),
+        executeQuery('SELECT * FROM listaseries WHERE type = 2 ORDER BY id DESC',),
     ]);
     const valor= ['Filmes', 'serie']
     res.status(200).render('filmesMain', { result: result, valor : valor });
@@ -33,7 +33,7 @@ router.get('/serie/:imdb_cod', async (req, res) => {
 
         // Busca os episódios relacionados na tabela series_ep
         const [resulFilms] = await Promise.all([
-            executeQuery('SELECT * FROM ep where type = ?', [serie.id]),
+            executeQuery('SELECT * FROM ep where type = ? ORDER BY id DESC', [serie.id]),
         ]);
 
         if (!resulFilms) {
@@ -42,8 +42,7 @@ router.get('/serie/:imdb_cod', async (req, res) => {
 
         const coverPath = serie.cover
         console.log(coverPath)
-        const valores = ['Filmes', 'filmes'];
-        const coverPth = ['01','02']
+        const valores = ['Cartoons', 'filmes'];
         //serie.cover; // Salvando o caminho da capa da série em uma constante
 
 

@@ -1,0 +1,36 @@
+<h3>Animes Adicionar Episódios</h3>
+<form class="form-add" action="/addEpCartoons" method="POST">
+    <label for="series_id">Selecione a série:</label>
+    <select name="series_id" id="series_id">
+        <% resulSeries.forEach(serie => { %>
+            <option value="<%= serie.id %>"><%= serie.title %></option>
+        <% }); %>
+    </select>
+    
+    <div class="ep-temp">
+        <label for="nr_episode">Episódio:</label>
+        <input type="number" id="nr_episode" name="nr_episode" min="1" max="3000" required>
+    
+        <label for="season">Temporada:</label>
+        <input type="number" id="season" name="season" min="1" max="100" required>
+    </div>
+    
+    <label for="title">Título:</label>
+    <input type="text" id="title" name="title" maxlength="200" required>
+    
+    <div class="mid-formato">
+        <label for="midia">Mídia:</label>
+        <input type="text" id="midia" name="midia" maxlength="300" required>
+    
+        <label for="formato">Formato:</label>
+        <select id="formato" name="formato">
+            <option value=".mp4">MP4</option>
+            <option value=".avi">AVI</option>
+            <option value=".mkv">MKV</option>
+            <option value=".wmv">WMV</option>
+        </select>
+    </div>
+    
+    <button type="submit">Adicionar</button>
+    <button type="button" onclick="resetForm()">Limpar</button>
+</form>

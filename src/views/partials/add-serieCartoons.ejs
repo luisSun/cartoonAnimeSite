@@ -1,0 +1,11 @@
+<h3> CARTOONS: Adicionar Série</h3>
+<form class="form-add" action="/addSerieCartoons" method="POST">
+    <label for="title">Título (máximo de 100 caracteres):</label>
+    <input type="text" id="title" name="title" maxlength="100" required><br><br>
+
+    <label for="coverlink">Link da Capa (máximo de 200 caracteres):</label>
+    <input type="text" id="coverlink" name="coverlink" maxlength="200" required><br><br>
+
+    <button type="submit">Adicionar</button>
+    <button type="button" onclick="resetForm()">Limpar</button>
+</form>

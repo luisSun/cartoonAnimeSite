@@ -93,7 +93,7 @@
 /* CSS para dispositivos menores ou iguais a 768px (mobile) */
 @media only screen and (max-width: 768px) {
     .card {
-        width: calc(50% - 10px); /* Reduzindo o tamanho do card para mostrar 2 cartões por linha */
+        width: calc(35% - 10px); /* Reduzindo o tamanho do card para mostrar 2 cartões por linha */
     }
 
     .card-title {
